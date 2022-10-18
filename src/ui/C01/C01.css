@@ -1,0 +1,29 @@
+.carousel {
+  display: flex;
+}
+.carousel .card {
+  margin-left: 10px; 
+  width: 50px;
+  height: 600px;
+  border-radius: 10px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+.carousel .card span {
+  font-weight: bold;
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transition: all 500ms ease-out
+}
+
+.carousel .card.selected {
+  width: 800px;
+  cursor: auto;
+}
+
+.carousel .card.selected span {
+  opacity: 1;
+}
