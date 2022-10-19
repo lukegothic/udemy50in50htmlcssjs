@@ -21,11 +21,11 @@ export const StepperProgress = styled.progress`
   transition: all 250ms ease;
   appearance: none;
   &::-webkit-progress-bar {
-    background-color: #555;
+    background-color: ${({theme}) => theme.background.inactive};
     box-shadow: none;
   }
   &::-webkit-progress-value {
-    background-color: #0075b7;
+    background-color: ${({theme}) => theme.background.active};
     transition: all 250ms ease-out;
   }
 `
@@ -41,7 +41,7 @@ export const StepperNumber = styled.span`
   font-weight: bold;
   border-width: 4px;
   border-style: solid;
-  border-color: ${({active}) => active ? '#0075b7' : '#555'};
+  border-color: ${({active, theme}) => active ? theme.background.active : theme.background.inactive};
   box-sizing: border-box;
   transition: all 250ms linear;
   transition-delay: 125ms;
