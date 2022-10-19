@@ -17,7 +17,6 @@ const titles = {
 export const C01 = () => {
   const [fondo, setFondo] = useState(fondo1);
   return (<div>
-    <h4>Hola soy challenge 1</h4>
     <div className="carousel">
       { [fondo1, fondo2, fondo3, fondo4, fondo5].map((f, i) => 
         <div className={`card ${f === fondo ? "selected": ""}`} style={{background:`url(${f})`}} onClick={() => setFondo(f)}><span>{titles[i]}</span></div>)
