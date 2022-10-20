@@ -2,20 +2,9 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #fff;
-  background-color: #ccc;
+  color: #666;
+  background-color: #eee;
 }
 
 .App {
-  display: grid;
-  grid-template-columns: 200px auto;
-}
-
-.challenge-selector {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-.challenge-button-true {
-  background-color: #444;
-  color: #fff;
 }

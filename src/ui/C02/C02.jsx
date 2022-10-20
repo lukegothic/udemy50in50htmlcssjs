@@ -1,5 +1,5 @@
 import './C02.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { StepAwareButton, StepperNumber, Stepper, StepperProgress } from './C02.styled';
 import { range } from 'lodash';
 

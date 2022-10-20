@@ -14,7 +14,7 @@ const App = () => {
         <div>
           { challenge && challenge in challengeMapping ? 
               challengeMapping[challenge] : 
-              <div>Selecciona un challenge de la izda</div>
+              <div>Selecciona un challenge</div>
           }
         </div>
       </div>
