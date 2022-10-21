@@ -57,4 +57,5 @@ export const challengeMapping = {
   1: <C01 />,
   2: <C02 />,
   3: <C03 />,
+  4: <C04 />,
 }
