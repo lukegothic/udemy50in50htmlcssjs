@@ -15,9 +15,10 @@ const titles = {
   4: "La Inquietud"
 };
 
-// useReducer is usually preferable to useState when you have complex state logic that involves multiple
-// sub-values or when the next state depends on the previous one.
+// useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or
+// when the next state depends on the previous one.
 
+// BLOQUE DEL REDUCER
 // actions
 const carouselActions = {
   SETCURRENTPHOTO: 1,
@@ -25,7 +26,10 @@ const carouselActions = {
 };
 
 // action manager
+// state es el estado anterior, action lo pasamos nosotros.
+// en general: action es: { type: ACCION, payload: datos_nuevos }
 const carouselActionManager = (state, action) => {
+  // el manager debe devolver siempre el nuevo state
   switch (action.type) {
     case carouselActions.SETCURRENTPHOTO:
       return {
@@ -48,6 +52,7 @@ const setCurrentPhoto = payload => ({
   payload
 });
 const addPhoto = payload => ({ type: carouselActions.ADDPHOTO, payload });
+// HASTA AQUI
 
 export const C01 = () => {
   // cambio a un usestate complejo para evitar re-render innecesario generado por actualizar secuencialmente (con useEffect) dos estados
@@ -64,6 +69,7 @@ export const C01 = () => {
             active={f === carousel.current}
             background={f}
             caption={titles[i]}
+            //onClick={() => manageCarousel({ type: carouselActions.SETCURRENTPHOTO, payload: f })}
             onClick={() => manageCarousel(setCurrentPhoto(f))}
           ></Photo>
         ))}
@@ -76,7 +82,8 @@ export const C01 = () => {
 };
 
 // approach clásico con useState
-export const C01State = () => {
+export const C01state = () => {
+  console.log("render");
   // TODO: reducer
   // cambio a un usestate complejo para evitar re-render innecesario generado por actualizar secuencialmente (con useEffect) dos estados
   const [carouselData, setCarouselData] = useState({
